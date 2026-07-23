@@ -1,0 +1,7 @@
+AMBLE Commerce Phase 4B + 4C
+
+Added: PayShap-ready payments with local simulator, guest cart/checkout, coupons, wishlist, reviews, recently viewed products, related products, payment retry and verified payment status pages.
+
+Use http://127.0.0.1:5500 so authentication cookies and the API remain on the same host.
+
+Guest checkout now includes a private guest-order.html receipt link.

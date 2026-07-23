@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account settings — AMBLE</title>
+  <script>(function(){var s=localStorage.getItem("amble-theme");document.documentElement.setAttribute("data-theme",s||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/polish.css" />
+  <link rel="stylesheet" href="css/reliability.css" />
+  <link rel="stylesheet" href="css/commerce.css" />
+  <link rel="stylesheet" href="css/engagement.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header id="site-nav"></header>
+  <main class="container page-shell" id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/index.html">Shop</a><span class="breadcrumbs__sep"></span><span aria-current="page">Account</span></nav>
+    <div class="page-heading">
+      <div><p class="page-heading__eyebrow">Your account</p><h1 class="page-title">Account settings</h1></div>
+      <button class="btn btn--secondary" id="logout-button" type="button">Log out</button>
+    </div>
+    <div class="account-grid">
+      <section class="checkout-card" aria-labelledby="profile-title">
+        <div class="checkout-card__head"><span class="checkout-card__step">01</span><h2 class="checkout-card__title" id="profile-title">Profile</h2></div>
+        <div id="profile-summary" class="account-summary"><div class="skeleton skeleton-line"></div></div>
+      </section>
+
+      <section class="checkout-card" aria-labelledby="password-title">
+        <div class="checkout-card__head"><span class="checkout-card__step">02</span><h2 class="checkout-card__title" id="password-title">Change password</h2></div>
+        <form class="form" id="password-form">
+          <div class="form-field"><label for="old_password">Current password</label><input id="old_password" name="old_password" type="password" autocomplete="current-password" required /></div>
+          <div class="form-field"><label for="new_password">New password</label><input id="new_password" name="new_password" type="password" autocomplete="new-password" required /></div>
+          <div class="form-field"><label for="new_password_confirm">Confirm new password</label><input id="new_password_confirm" name="new_password_confirm" type="password" autocomplete="new-password" required /></div>
+          <p class="form-error" id="password-error" role="alert"></p>
+          <button class="btn btn--primary" id="password-submit" type="submit">Change password</button>
+        </form>
+      </section>
+
+      <section class="checkout-card account-grid__wide" aria-labelledby="address-title">
+        <div class="checkout-card__head"><span class="checkout-card__step">03</span><h2 class="checkout-card__title" id="address-title">Saved delivery addresses</h2></div>
+        <div id="address-list" class="address-list"><div class="skeleton skeleton-line"></div></div>
+        <details class="address-create">
+          <summary class="btn btn--secondary">Add an address</summary>
+          <form class="form address-form" id="address-form">
+            <div class="form-field form-field--split">
+              <div class="form-field"><label for="label">Label</label><input id="label" name="label" value="Home" required /></div>
+              <div class="form-field"><label for="full_name">Full name</label><input id="full_name" name="full_name" autocomplete="name" required /></div>
+            </div>
+            <div class="form-field"><label for="address_line1">Street address</label><input id="address_line1" name="address_line1" autocomplete="address-line1" required /></div>
+            <div class="form-field"><label for="address_line2">Address line 2</label><input id="address_line2" name="address_line2" autocomplete="address-line2" /></div>
+            <div class="form-field form-field--split">
+              <div class="form-field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" required /></div>
+              <div class="form-field"><label for="province">Province</label><input id="province" name="province" autocomplete="address-level1" /></div>
+            </div>
+            <div class="form-field form-field--split">
+              <div class="form-field"><label for="postal_code">Postal code</label><input id="postal_code" name="postal_code" autocomplete="postal-code" required /></div>
+              <div class="form-field"><label for="country">Country</label><input id="country" name="country" value="South Africa" required /></div>
+            </div>
+            <div class="form-field"><label for="phone_number">Phone number</label><input id="phone_number" name="phone_number" type="tel" autocomplete="tel" /></div>
+            <label class="commerce-check"><input type="checkbox" name="is_default" value="true" /><span>Make this my default address</span></label>
+            <p class="form-error" id="address-error" role="alert"></p>
+            <button class="btn btn--primary" id="address-submit" type="submit">Save address</button>
+          </form>
+        </details>
+      </section>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="config.js"></script><script type="module" src="js/pages/account.js"></script>
+</body>
+</html>

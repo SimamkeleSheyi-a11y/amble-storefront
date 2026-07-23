@@ -1,0 +1,14 @@
+AMBLE POLISH UPDATE
+===================
+
+Changes in this package:
+- Corrected the homepage currency note from USD to South African rand (ZAR).
+- Standardized all displayed prices with the South African locale and ZAR currency formatting.
+- Improved homepage product-image detection.
+- Improved the product gallery so primary images and additional gallery images appear together.
+- Prevented duplicate product-gallery images.
+- Improved related-product image detection.
+- Improved cart and checkout image handling when API image values are strings or objects.
+- Preserved the existing Django API paths, authentication flow, HTML structure and styling.
+
+This ZIP contains frontend files only. Product names, prices, stock and uploaded images remain in the Django backend/database.

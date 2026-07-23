@@ -1,0 +1,22 @@
+AMBLE VISUAL POLISH V2
+=======================
+
+This package keeps the working API, login, product gallery, cart, checkout and
+orders logic unchanged.
+
+Visual improvements:
+- More premium sticky navigation and controls
+- Stronger hero depth and typography
+- Elevated store-benefit cards
+- Sticky, glass-like catalog filter toolbar
+- Complete product-card surfaces with improved hover and focus states
+- Better price and stock presentation
+- Refined product gallery and sticky desktop product-information panel
+- Cleaner form and authentication cards
+- Elevated cart lines and order summary
+- Cleaner checkout item cards and confirmation view
+- Refined order-history cards, footer and toast notifications
+- Improved mobile category scrolling and spacing
+- Reduced-motion behavior preserved
+
+The visual work is isolated in css/polish.css for easy rollback.

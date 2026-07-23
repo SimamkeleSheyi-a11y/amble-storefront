@@ -1,0 +1,28 @@
+AMBLE RELIABILITY V3
+====================
+
+Built on top of the working AMBLE visual-polish version.
+
+Improvements:
+- Shared 15-second API timeout handling, including login and token refresh.
+- Clear offline and back-online status banner.
+- Concurrent refresh-token requests are combined into one request.
+- Failed session restoration can retry later instead of remaining permanently cached.
+- Friendlier backend, offline, timeout, permission, rate-limit and server errors.
+- Loading skeletons for products, product details, cart, checkout and orders.
+- Retry actions for product, cart, checkout, order and catalog loading failures.
+- Duplicate login, registration, add-to-cart and checkout submissions are blocked.
+- Checkout refreshes the cart immediately before creating an order.
+- If cart quantities, prices or totals changed, checkout updates and asks for confirmation again.
+- If an item becomes unavailable, checkout pauses and sends the customer back to the cart.
+- Cart warns about unavailable items and disables checkout until they are removed.
+- Product and cart actions recognize stock-change errors and refresh safely.
+- Busy buttons and forms expose accessible aria-busy states.
+- Error messages receive keyboard focus so screen-reader and keyboard users notice them.
+
+Unchanged:
+- Django API endpoint paths
+- Authentication model
+- Product, cart, checkout and order backend data
+- Database and admin content
+- Existing visual-polish layer

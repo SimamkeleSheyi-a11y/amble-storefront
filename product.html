@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — AMBLE</title>
+  <script>(function(){var s=localStorage.getItem("amble-theme");document.documentElement.setAttribute("data-theme",s||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" /><link rel="stylesheet" href="css/base.css" /><link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/polish.css" />
+  <link rel="stylesheet" href="css/reliability.css" />
+  <link rel="stylesheet" href="css/commerce.css" />
+  <link rel="stylesheet" href="css/engagement.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header id="site-nav"></header>
+  <main class="container" id="main-content">
+    <div id="product-container">
+      <div class="product-detail"><div class="skeleton skeleton-card__image"></div><div><div class="skeleton skeleton-line skeleton-line--short"></div><div class="skeleton skeleton-line" style="height:42px;margin-block:1rem"></div><div class="skeleton skeleton-line skeleton-line--short"></div><div class="skeleton skeleton-line" style="height:130px;margin-top:2rem"></div></div></div>
+    </div>
+    <section class="catalog-section" id="related-products" hidden aria-labelledby="related-title">
+      <div class="section-head"><div><p class="eyebrow">You may also like</p><h2 class="section-title" id="related-title">More from the collection</h2></div></div>
+      <div class="product-grid" data-related-grid></div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="config.js"></script><script type="module" src="js/pages/product.js"></script>
+</body>
+</html>
